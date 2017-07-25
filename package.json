@@ -17,7 +17,7 @@
   "license": "UNLICENSED",
   "homepage": "https://github.com/joaomlneto/antidote-rest-client#readme",
   "dependencies": {
-    "antidote_ts_client": "^0.1.6",
+    "antidote_ts_client": "^0.1.7",
     "express": "^4.15.3"
   },
   "devDependencies": {
