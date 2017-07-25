@@ -1,0 +1,26 @@
+{
+  "name": "antidote-rest-client",
+  "version": "0.1.0",
+  "description": "An HTTP/HTTPS REST API for AntidoteDB",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomlneto/antidote-rest-client.git"
+  },
+  "author": "João Neto",
+  "bugs": {
+    "url": "https://github.com/joaomlneto/antidote-rest-client/issues"
+  },
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/joaomlneto/antidote-rest-client#readme",
+  "dependencies": {
+    "antidote_ts_client": "^0.1.6",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
