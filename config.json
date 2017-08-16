@@ -1,9 +1,0 @@
-{
-  "antidote": {
-    "hostname": "localhost",
-    "port": "8087"
-  },
-  "server": {
-    "port": "3000"
-  }
-}

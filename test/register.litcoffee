@@ -1,4 +1,4 @@
-    server = require '../server'
+    server = require '../src/server'
     chai = require 'chai'
     chaiHTTP = require 'chai-http'
 
@@ -11,7 +11,7 @@
     randomString = (length) ->
       Math.round(
         (Math.pow(36, length + 1) - Math.random() * Math.pow(36, length)))
-        .toString(36).slice(1);
+        .toString(36).slice(1)
 
     describe 'Register', ->
 

@@ -1,31 +1,28 @@
 # antidote-rest-client
 An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in **Literate IcedCoffeeScript**.
 
+## Dependencies
+Requires `iced-coffee-script` installed globally:
+- `$ npm install -g iced-coffee-script`
+
 ## Installing using NPM
-Coming soon. Still not published.
+- `$ npm install -g antidote-rest-client`
 
 ## Installing from Source
 - `$ git clone https://github.com/joaomlneto/antidote-rest-client.git`
 - `$ cd antidote-rest-client`
+- `$ npm test` (optionally, if you want to check everything is OK)
 - `$ npm install`
-
-## Configuring
-##### In `config.js`:
-- `ANTIDOTE_REST_API_HOST_NAME`:
-hostname of the Antidote instance (default: `localhost`)
-- `ANTIDOTE_REST_API_HOST_PORT`:
-port of the Antidote instance (default: `8087`)
-- `ANTIDOTE_REST_API_PORT`:
-web server port (default: `3000`)
-
-## Testing
-###### Optionally, if you want to check everything is OK:
-- `$ npm test`
-
-## Running
 - `$ npm start`
 
 Then fire up your browser to [localhost:3000](http://localhost:3000)
+
+## Configuring
+Configuration is done through the command line.
+See below the options and default values.
+- Antidote hostname: `--antidote:hostname=localhost`
+- Antidote port: `--antidote:port=8087`
+- REST server port: `--server:port=3000`
 
 ## REST API
 Only implementing a subset of the available CRDTs in Antidote:

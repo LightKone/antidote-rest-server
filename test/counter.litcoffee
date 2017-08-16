@@ -1,4 +1,6 @@
-    server = require '../server'
+    ## TODO: fix package.json mocha invocation to implicitly use litcoffee files
+
+    server = require '../src/server'
     chai = require 'chai'
     chaiHTTP = require 'chai-http'
 

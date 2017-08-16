@@ -1,4 +1,4 @@
-    server = require '../server'
+    server = require '../src/server'
     chai = require 'chai'
     chaiHTTP = require 'chai-http'
 

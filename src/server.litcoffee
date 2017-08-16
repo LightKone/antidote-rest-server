@@ -6,18 +6,26 @@
 
 ## Load configuration
 
-    conf.argv().env().file({file: './config.json'})
+    conf.argv().env()
+
+    antidoteHost = conf.get 'antidote:hostname'
+    antidoteHost ?= 'localhost'
+
+    antidotePort = conf.get 'antidote:port'
+    antidotePort ?= '8087'
+
+    serverPort = conf.get('server:port')
+    serverPort ?= 3000
 
 ## Connect to Antidote
 
-    antidoteHost = conf.get 'antidote:hostname'
-    antidotePort = conf.get 'antidote:port'
     antidote = antidoteClient.connect(antidotePort, antidoteHost)
+    console.log "Using Antidote at #{antidoteHost}:#{antidotePort}"
 
 ## Setup Web Server
 
     server = express()
-    server.listen(conf.get 'server:port')
+    server.listen(serverPort)
 
     server.use (req, res, next) ->
       # log all requests to console
@@ -27,7 +35,7 @@
       res.type 'text/plain'
       next()
 
-    console.log "Listening on port #{conf.get 'server:port'}"
+    console.log "Listening on port #{serverPort}"
 
 ## API
 
