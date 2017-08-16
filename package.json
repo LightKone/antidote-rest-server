@@ -1,6 +1,6 @@
 {
   "name": "antidote-rest-client",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An HTTP/HTTPS REST API for AntidoteDB",
   "main": "index.js",
   "scripts": {
