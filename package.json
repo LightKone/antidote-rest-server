@@ -1,5 +1,5 @@
 {
-  "name": "antidote-rest-client",
+  "name": "antidote-rest-server",
   "version": "0.5.0",
   "description": "An HTTP/HTTPS REST API for AntidoteDB",
   "main": "index.js",
@@ -9,17 +9,17 @@
     "test": "mocha --compilers coffee:iced-coffee-script/register test/*.litcoffee",
     "prepublish": ""
   },
-  "bin": "bin/antidote-rest-client.coffee",
+  "bin": "bin/antidote-rest-server.coffee",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joaomlneto/antidote-rest-client.git"
+    "url": "git+https://github.com/joaomlneto/antidote-rest-server.git"
   },
   "author": "João Neto <joao@neto.pt> (joao.neto.pt)",
   "bugs": {
-    "url": "https://github.com/joaomlneto/antidote-rest-client/issues"
+    "url": "https://github.com/joaomlneto/antidote-rest-server/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/joaomlneto/antidote-rest-client",
+  "homepage": "https://github.com/joaomlneto/antidote-rest-server",
   "dependencies": {
     "antidote_ts_client": "^0.1.7",
     "express": "^4.15.4",
