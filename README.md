@@ -28,10 +28,14 @@ See below the options and default values.
 Only implementing a subset of the available CRDTs in Antidote:
 
 - GET `/counter/read/:bucket/:key`
-- GET `/counter/increment/:bucket/:key/:amount?`
+- GET/PUT `/counter/increment/:bucket/:key/:amount?`
 - GET `/integer/read/:bucket/:key`
-- GET `/integer/increment/:bucket/:key/:amount?`
-- GET `/integer/set/:bucket/:key/:value`
+- GET/PUT `/integer/increment/:bucket/:key/:amount?`
+- GET/PUT `/integer/set/:bucket/:key/:value`
 - GET `/set/read/:bucket/:key`
-- GET `/set/add/:bucket/:key/:elem`
-- GET `/set/remove/:bucket/:key/:elem`
+- GET/PUT/POST `/set/add/:bucket/:key/:elem`
+- GET/DELETE `/set/remove/:bucket/:key/:elem`
+- GET `/register/read/:bucket/:key`
+- GET/PUT `/register/set/:bucket/:key/:value`
+- GET `/mvregister/read/:bucket/:key`
+- GET/PUT `/mvregister/set/:bucket/:key/:value`

@@ -6,6 +6,7 @@
 
 ## Load configuration or defaults
 
+    ## TODO: it would be nice to be more flexible with configuration...?
     conf.argv().env()
 
     antidoteHost = conf.get 'antidote:hostname'
@@ -49,6 +50,6 @@
 
     server.use '/set', require('./routes/set')(server, antidote)
 
-## For testing
+#### Required for testing
 
     module.exports = server

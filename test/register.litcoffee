@@ -1,3 +1,5 @@
+    ## TODO: only testing using GET. check using other methods as well!
+
     server = require '../src/server'
     chai = require 'chai'
     chaiHTTP = require 'chai-http'

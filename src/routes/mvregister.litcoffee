@@ -9,12 +9,20 @@
         res.send String value
         next()
 
-      router.get '/set/:bucket/:key/:value', (req, res, next) ->
-        value = String req.params.value
-        antidote.defaultBucket = req.params.bucket
-        mvregister = antidote.multiValueRegister req.params.key
-        await antidote.update(mvregister.set(value)).then defer response
-        res.send "ok"
-        next()
+      router.route '/set/:bucket/:key/:value'
+        .get (req, res, next) ->
+          value = String req.params.value
+          antidote.defaultBucket = req.params.bucket
+          mvregister = antidote.multiValueRegister req.params.key
+          await antidote.update(mvregister.set(value)).then defer response
+          res.send "ok"
+          next()
+        .put (req, res, next) ->
+          value = String req.params.value
+          antidote.defaultBucket = req.params.bucket
+          mvregister = antidote.multiValueRegister req.params.key
+          await antidote.update(mvregister.set(value)).then defer response
+          res.send "ok"
+          next()
 
       return router

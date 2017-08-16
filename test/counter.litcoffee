@@ -1,4 +1,5 @@
     ## TODO: fix package.json mocha invocation to implicitly use litcoffee files
+    ## TODO: only testing using GET. check using other methods as well!
 
     server = require '../src/server'
     chai = require 'chai'

@@ -9,12 +9,20 @@
         res.send String value
         next()
 
-      router.get '/increment/:bucket/:key/:amount?', (req, res, next) ->
-        amount = parseInt(req.params.amount ?= 1) # default amount = 1
-        antidote.defaultBucket = req.params.bucket
-        counter = antidote.counter req.params.key
-        await antidote.update(counter.increment(amount)).then defer response
-        res.send('ok')
-        next()
+      router.route '/increment/:bucket/:key/:amount?'
+        .get (req, res, next) ->
+          amount = parseInt(req.params.amount ?= 1) # default amount = 1
+          antidote.defaultBucket = req.params.bucket
+          counter = antidote.counter req.params.key
+          await antidote.update(counter.increment(amount)).then defer response
+          res.send('ok')
+          next()
+        .put (req, res, next) ->
+          amount = parseInt(req.params.amount ?= 1) # default amount = 1
+          antidote.defaultBucket = req.params.bucket
+          counter = antidote.counter req.params.key
+          await antidote.update(counter.increment(amount)).then defer response
+          res.send('ok')
+          next()
 
       return router
