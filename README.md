@@ -1,4 +1,4 @@
-# antidote-rest-client
+# Antidote REST Server
 An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in **Literate IcedCoffeeScript**.
 
 ## Dependencies
@@ -6,11 +6,11 @@ Requires `iced-coffee-script` installed globally:
 - `$ npm install -g iced-coffee-script`
 
 ## Installing using NPM
-- `$ npm install -g antidote-rest-client`
+- `$ npm install -g antidote-rest-server`
 
 ## Installing from Source
-- `$ git clone https://github.com/joaomlneto/antidote-rest-client.git`
-- `$ cd antidote-rest-client`
+- `$ git clone https://github.com/joaomlneto/antidote-rest-server.git`
+- `$ cd antidote-rest-server`
 - `$ npm test` (optionally, if you want to check everything is OK)
 - `$ npm install`
 - `$ npm start`
