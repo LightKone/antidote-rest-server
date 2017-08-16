@@ -4,7 +4,7 @@
     express = require 'express'
     antidoteClient = require 'antidote_ts_client'
 
-## Load configuration
+## Load configuration or defaults
 
     conf.argv().env()
 
