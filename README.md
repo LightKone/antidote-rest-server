@@ -27,15 +27,24 @@ See below the options and default values.
 ## REST API
 Only implementing a subset of the available CRDTs in Antidote:
 
+#### PN Counter
 - GET `/counter/read/:bucket/:key`
 - GET/PUT `/counter/increment/:bucket/:key/:amount?`
+
+#### Integer
 - GET `/integer/read/:bucket/:key`
 - GET/PUT `/integer/increment/:bucket/:key/:amount?`
 - GET/PUT `/integer/set/:bucket/:key/:value`
+
+#### Set
 - GET `/set/read/:bucket/:key`
 - GET/PUT/POST `/set/add/:bucket/:key/:elem`
 - GET/DELETE `/set/remove/:bucket/:key/:elem`
+
+#### LWW Register
 - GET `/register/read/:bucket/:key`
 - GET/PUT `/register/set/:bucket/:key/:value`
+
+#### MV Register
 - GET `/mvregister/read/:bucket/:key`
 - GET/PUT `/mvregister/set/:bucket/:key/:value`
