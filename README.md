@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/joaomlneto/antidote-rest-server.svg?branch=master)](https://travis-ci.org/joaomlneto/antidote-rest-server)
+
 # Antidote REST Server
 An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in **Literate IcedCoffeeScript**.
 
