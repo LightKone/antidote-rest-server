@@ -9,6 +9,7 @@ Requires `iced-coffee-script` installed globally:
 
 ## Installing using NPM
 - `$ npm install -g antidote-rest-server`
+- `$ antidote-rest-server`
 
 ## Installing from Source
 - `$ git clone https://github.com/joaomlneto/antidote-rest-server.git`
