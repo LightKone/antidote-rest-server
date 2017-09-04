@@ -3,6 +3,9 @@ node_js:
   - "node"
   - "lts/*"
   - "7"
+  - "6"
+  - "5"
+  - "4"
 sudo: required
 services: # need to start antidote instance
   - docker
