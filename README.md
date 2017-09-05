@@ -1,3 +1,4 @@
+[![Version npm](https://img.shields.io/npm/v/antidote-rest-server.svg?style=flat-square)](https://www.npmjs.com/package/antidote-rest-server)
 [![Build Status](https://travis-ci.org/joaomlneto/antidote-rest-server.svg?branch=master)](https://travis-ci.org/joaomlneto/antidote-rest-server)
 [![Dependencies](https://img.shields.io/david/joaomlneto/antidote-rest-server.svg?style=flat-square)](https://david-dm.org/joaomlneto/antidote-rest-server)
 
