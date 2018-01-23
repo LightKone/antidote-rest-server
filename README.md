@@ -3,6 +3,8 @@
 [![Dependencies](https://img.shields.io/david/joaomlneto/antidote-rest-server.svg?style=flat-square)](https://david-dm.org/joaomlneto/antidote-rest-server)
 
 # Antidote REST Server
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/joaomlneto/antidote-rest-server.svg)](https://greenkeeper.io/)
 An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in **Literate IcedCoffeeScript**.
 
 ## Dependencies
