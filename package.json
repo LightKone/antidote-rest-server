@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "iced src/server.litcoffee",
-    "pretest": "coffeelint src/*.litcoffee src/**/*.litcoffee test/*.litcoffee",
-    "test": "mocha --require iced-coffee-script/register",
+    "pretest": "coffeelint ./**/*.litcoffee",
+    "test": "mocha --require iced-coffee-script/register test/**/*.litcoffee",
     "prepublish": ""
   },
   "bin": "bin/antidote-rest-server.coffee",
