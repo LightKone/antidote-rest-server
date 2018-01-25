@@ -6,7 +6,7 @@
   "scripts": {
     "start": "iced src/server.litcoffee",
     "pretest": "coffeelint ./**/*.litcoffee",
-    "test": "mocha --require iced-coffee-script/register test/**/*.litcoffee",
+    "test": "mocha --require iced-coffee-script/register test/**/*.litcoffee --exit",
     "prepublish": ""
   },
   "bin": "bin/antidote-rest-server.coffee",
