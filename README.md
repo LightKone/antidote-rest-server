@@ -30,6 +30,10 @@ See below the options and default values.
 - Antidote port: `--antidote:port=8087`
 - REST server port: `--server:port=3000`
 
+## A QuickStart Tutorial
+There is a small [tutorial on the GitHub wiki](https://github.com/joaomlneto/antidote-rest-server/wiki/QuickStart) to help you get started:
+
+
 ## REST API
 Only implementing a subset of the available CRDTs in Antidote:
 
