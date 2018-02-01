@@ -1,19 +1,36 @@
 language: node_js
+
 node_js:
-  - "node"
-  - "lts/*"
-  - "8"
-  - "7"
-  - "6"
+- "node"
+- "lts/*"
+- "8"
+- "7"
+- "6"
+
 sudo: required
+
 services: # need to start antidote instance
   - docker
+
 cache: # cache node_modules between builds!
   directories:
-    - "node_modules"
+  - "node_modules"
+  - "antidote-java-tutorial"
 
+# get working antidoteDB containers before starting tests
 before_install:
-  - git clone https://github.com/SyncFree/antidote-java-tutorial.git
-  - cd antidote-java-tutorial/setup
-  - ./start_antidote.sh
-  - cd ../..
+- git clone https://github.com/SyncFree/antidote-java-tutorial.git
+- cd antidote-java-tutorial/setup
+- ./start_antidote.sh
+- cd ../..
+
+# install and run greenkeeper-lockfile
+before_install:
+- npm install -g greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+
+# access token for greenkeeper
+env:
+  global:
+    secure: 3b9tnzeJ+Sv9/dd063VlCe4e+OHOo/m51erIeas/10th2JFA35EVbY4ulPhrIudjGg7V5PECaCfDuenwVsp2cKYajA/xpoOxnyAVq8FQtNs00LlYVv1Ss4U80tZoU0GdBw9g+Q/WbczldoyugBsMlTAgvWfBlYIMhEPRJjT0NgFV+P/2OQCq4CfGc+8qeD1lAFWI10WfngwweDo5TVxTRkg76gnE7SEMdRbSmV8t+3sKT1PbO/RiqHSbhUePZ8ReOgRPlUqJxTvoKNQfABE6aC5XRGqEsuS/jkQaPPEv4+BDuo4kMgvG2zWLHaq8wS3zgFvZaYpo5ZjYaM/ux/BOuo8rgRPS8YtU0z9kVXLX8ORGVTjqgGW3toVhX9rNae8PDTAjXVVSO4ixejFIZJTxZqRWN0hzjplU9HCGtkZfbPvKPsJw5uQDLXeqFj51c+S7ADrwD2ohdgmGk9WesRR1k8vwPLRaRuZMpHYIehv0Q/eTYtVvBsZBPsISyNobjafF+NJ4l9RC3hap8t60gBAtphw/C0QXv8gI0/VaDMKxNczUCNVf/+vhCLLRLp+3/fxrm8ffwRM6NDEPp8LFuZljEtBSiOmiB6rOQ5FK+pTrDBP06xvUUTiDlx4hl4/AwgjR5oYE8F4gWHrmySvtnBP70ufgBuABN/LQ5x62JXaYNxQ=
