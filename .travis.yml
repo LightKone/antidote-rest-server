@@ -17,16 +17,16 @@ cache: # cache node_modules between builds!
   - "node_modules"
   - "antidote-java-tutorial"
 
-# get working antidoteDB containers before starting tests
+
 before_install:
+# get working antidoteDB containers before starting tests
 - git clone https://github.com/SyncFree/antidote-java-tutorial.git
 - cd antidote-java-tutorial/setup
 - ./start_antidote.sh
 - cd ../..
-
-# install and run greenkeeper-lockfile
-before_install:
+# install and run greenkeeper-lockfile (only for node stable)
 - npm install -g greenkeeper-lockfile@1
+
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 
