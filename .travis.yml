@@ -9,14 +9,14 @@ node_js:
 
 sudo: required
 
-services: # need to start antidote instance
-  - docker
+services:
+  - docker # needed to start antidote instance
 
 cache: # cache node_modules between builds!
   directories:
   - "node_modules"
   - "antidote-java-tutorial"
-
+# TODO: it would be cool to cache docker containers between builds
 
 before_install:
 # get working antidoteDB containers before starting tests
@@ -27,6 +27,7 @@ before_install:
 # install and run greenkeeper-lockfile (only for node stable)
 - npm install -g greenkeeper-lockfile@1
 
+# greenkeeper lockfile update
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 

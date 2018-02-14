@@ -1,11 +1,11 @@
-    module.exports = (webserver, antidote) ->
+    module.exports = (antidote) ->
 
       router = require('express').Router()
 
       router.get '/read/:bucket/:key', (req, res, next) ->
         antidote.defaultBucket = req.params.bucket
         mvregister = antidote.multiValueRegister req.params.key
-        await mvregister.read().then defer value
+        value = await mvregister.read()
         res.send String value
         next()
 
@@ -14,14 +14,14 @@
           value = String req.params.value
           antidote.defaultBucket = req.params.bucket
           mvregister = antidote.multiValueRegister req.params.key
-          await antidote.update(mvregister.set(value)).then defer response
+          response = await antidote.update mvregister.set value
           res.send "ok"
           next()
         .put (req, res, next) ->
           value = String req.params.value
           antidote.defaultBucket = req.params.bucket
           mvregister = antidote.multiValueRegister req.params.key
-          await antidote.update(mvregister.set(value)).then defer response
+          response = await antidote.update mvregister.set value
           res.send "ok"
           next()
 

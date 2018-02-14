@@ -1,35 +1,40 @@
     ## TODO: only testing using GET. check using other methods as well!
 
-    server = require '../src/server'
     chai = require 'chai'
     chaiHTTP = require 'chai-http'
 
     chai.should()
     chai.use(chaiHTTP)
 
+    AntidoteRESTServer = require '../src/server'
+
     bucket = 'test'
-    obj = 'register1'
+    obj = 'mvregister1'
 
     randomString = (length) ->
       Math.round(
         (Math.pow(36, length + 1) - Math.random() * Math.pow(36, length)))
         .toString(36).slice(1)
 
-    describe 'Register', ->
+    describe 'MVRegister', ->
 
-      beforeEach (done) ->
-        done()
+      before ->
+        @restServer = new AntidoteRESTServer('localhost', 8087, 3000)
+        @restServer.start()
+        @httpServer = @restServer.getHttpServer()
 
-      it 'Should be able to set it to any value', (done) ->
+      after ->
+        @restServer.stop()
+
+      it 'Should be able to set it to any value', ->
         value = randomString(10)
-        await chai.request(server)
-          .get("/register/set/#{bucket}/#{obj}/#{value}").end defer err, res
+        res = await chai.request(@httpServer)
+          .get("/mvregister/set/#{bucket}/#{obj}/#{value}")
         res.should.have.status 200
         res.text.should.be.a 'string'
         res.text.should.equal 'ok'
-        await chai.request(server)
-          .get("/register/read/#{bucket}/#{obj}").end defer err, res
+        res = await chai.request(@httpServer)
+          .get("/mvregister/read/#{bucket}/#{obj}")
         res.should.have.status 200
         res.text.should.be.a 'string'
         res.text.should.equal value
-        done()
