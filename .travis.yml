@@ -15,7 +15,6 @@ services:
 cache: # cache node_modules between builds!
   directories:
   - "node_modules"
-  - "antidote-java-tutorial"
 # TODO: it would be cool to cache docker containers between builds
 
 before_install:
