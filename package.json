@@ -1,6 +1,6 @@
 {
   "name": "antidote-rest-server",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "An HTTP/HTTPS REST API for AntidoteDB",
   "main": "index.js",
   "scripts": {
