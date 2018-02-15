@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# macOS crap
+.DS_Store
+
 # dont include compiled JS directory
 lib/

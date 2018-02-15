@@ -1,0 +1,7 @@
+# only pack JS files -- no coffeescript
+*.coffee
+*.litcoffee
+
+Cakefile
+.travis.yml
+coffeelint.json

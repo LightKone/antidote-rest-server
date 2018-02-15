@@ -7,7 +7,7 @@
     "start": "coffee src/start.coffee",
     "pretest": "coffeelint ./**/*.litcoffee",
     "test": "mocha --require coffeescript/register test/**/*.litcoffee --exit",
-    "prepublish": "cake build"
+    "prepublishOnly": "cake build"
   },
   "bin": "bin/antidote-rest-server.js",
   "repository": {
