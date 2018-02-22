@@ -4,18 +4,14 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/joaomlneto/antidote-rest-server.svg)](https://greenkeeper.io/)
 
 # Antidote REST Server
-An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in **Literate IcedCoffeeScript**.
-
-## Dependencies
-Requires `iced-coffee-script` installed globally:
-- `$ npm install -g iced-coffee-script`
+An HTTP/HTTPS REST API for [AntidoteDB](http://syncfree.github.io/antidote), written in CoffeeScript.
 
 ## Installing using NPM
 - `$ npm install -g antidote-rest-server`
 - `$ antidote-rest-server`
 
 ## Installing from Source
-- `$ git clone https://github.com/joaomlneto/antidote-rest-server.git`
+- `$ git clone https://github.com/LightKone/antidote-rest-server.git`
 - `$ cd antidote-rest-server`
 - `$ npm test` (optionally, if you want to check everything is OK)
 - `$ npm install`
@@ -31,7 +27,7 @@ See below the options and default values.
 - REST server port: `--server:port=3000`
 
 ## A QuickStart Tutorial
-There is a small [tutorial on the GitHub wiki](https://github.com/joaomlneto/antidote-rest-server/wiki/QuickStart) to help you get started:
+There is a small [tutorial on the GitHub wiki](https://github.com/LightKone/antidote-rest-server/wiki/QuickStart) to help you get started:
 
 
 ## REST API
