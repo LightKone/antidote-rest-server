@@ -36,11 +36,8 @@ Get package information
             # TODO: change API to return JSON data
             res.type 'text/plain'
             next()
-          @webServer.use '/counter',    require('./v1/counter')(@antidote)
-          @webServer.use '/integer',    require('./v1/integer')(@antidote)
-          @webServer.use '/register',   require('./v1/register')(@antidote)
-          @webServer.use '/mvregister', require('./v1/mvregister')(@antidote)
-          @webServer.use '/set',        require('./v1/set')(@antidote)
+
+          @webServer.use '/', require('./v1/router')(@antidote)
 
       stop: () ->
         if @running

@@ -4,7 +4,7 @@
   "description": "An HTTP/HTTPS REST API for AntidoteDB",
   "main": "index.js",
   "scripts": {
-    "start": "coffee src/start.coffee",
+    "start": "coffee src/start.litcoffee",
     "pretest": "coffeelint ./**/*.litcoffee",
     "test": "mocha --require coffeescript/register test/**/*.litcoffee --exit",
     "prepublishOnly": "cake build"

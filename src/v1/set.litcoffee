@@ -37,14 +37,14 @@
           elem = String req.params.elem
           antidote.defaultBucket = req.params.bucket
           set = antidote.set req.params.key
-          response = await antidote.update(set.remove(elem)).then defer response
+          response = await antidote.update set.remove elem
           res.send "ok"
           next()
         .delete (req, res, next) ->
           elem = String req.params.elem
           antidote.defaultBucket = req.params.bucket
           set = antidote.set req.params.key
-          await antidote.update(set.remove(elem)).then defer response
+          response = await antidote.update set.remove elem
           res.send "ok"
           next()
 
