@@ -24,7 +24,7 @@ Configuration is done through the command line.
 See below the options and default values.
 - Antidote hostname: `--antidote:hostname=localhost`
 - Antidote port: `--antidote:port=8087`
-- REST server port: `--server:port=3000`
+- REST server port: `--webserver:port=3000`
 
 ## A QuickStart Tutorial
 There is a small [tutorial on the GitHub wiki](https://github.com/LightKone/antidote-rest-server/wiki/QuickStart) to help you get started:
