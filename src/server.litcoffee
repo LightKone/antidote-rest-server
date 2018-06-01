@@ -32,7 +32,7 @@ Get package information
           @webServer.use (req, res, next) ->
             # log all requests to console
             #console.log "> #{req.method.toUpperCase()} #{req.url}"
-            # tihs REST API replies in text/plain
+            # this REST API replies in text/plain
             # TODO: change API to return JSON data
             res.type 'text/plain'
             next()
