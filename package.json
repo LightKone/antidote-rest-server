@@ -24,7 +24,7 @@
     "node": ">=7.6.0"
   },
   "dependencies": {
-    "antidote_ts_client": ">=0.1.7",
+    "antidote_ts_client": ">=0.2.2",
     "express": ">=4.16.2",
     "nconf": ">=0.10.0"
   },
