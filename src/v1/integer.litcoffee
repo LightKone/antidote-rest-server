@@ -47,9 +47,9 @@ new value being set and issuing an `increment` operation:
           res.send "ok"
           next()
         .put (req, res, next) ->
-          value = parseInt(req.params.value)
           antidote.defaultBucket = req.params.bucket
           integer = antidote.counter req.params.key
+          value = parseInt(req.params.value) - await integer.read()
           response = await antidote.update integer.increment value
           res.send "ok"
           next()
