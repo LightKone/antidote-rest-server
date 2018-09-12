@@ -21,7 +21,7 @@
   "license": "MIT",
   "homepage": "https://github.com/joaomlneto/antidote-rest-server",
   "engines": {
-    "node": ">=7.6.0"
+    "node": ">=8.0.0"
   },
   "dependencies": {
     "antidote_ts_client": ">=0.2.2",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "chai": ">=4.1.2",
-    "chai-http": "github:chaijs/chai-http#master",
+    "chai-http": ">=4.2.0",
     "coffeelint": ">=2.0.7",
     "mocha": ">=5.0.0"
   }
