@@ -37,10 +37,10 @@ Only implementing a subset of the available CRDTs in Antidote:
 - GET `/counter/read/:bucket/:key`
 - GET/PUT `/counter/increment/:bucket/:key/:amount?`
 
-#### Integer
-- GET `/integer/read/:bucket/:key`
-- GET/PUT `/integer/increment/:bucket/:key/:amount?`
-- GET/PUT `/integer/set/:bucket/:key/:value`
+#### ~~Integer~~ (deprecated)
+- ~~GET `/integer/read/:bucket/:key`~~
+- ~~GET/PUT `/integer/increment/:bucket/:key/:amount?`~~
+- ~~GET/PUT `/integer/set/:bucket/:key/:value`~~
 
 #### Set
 - GET `/set/read/:bucket/:key`
